@@ -19,14 +19,14 @@ Built for hackathons ⚡ – Fullstack + Real-time AI voice + Telephony integrat
 
 ## 🧠 System Architecture
 
-![Architecture](assets/demo-video.mp4)  
+![System Architecture](https://github.com/user-attachments/assets/773edfba-7d3a-4739-ad2a-c047c5ec5437)
 <!-- Replace with your architecture image if needed -->
 
 ---
 
 ## 🎙️ Voice AI Flow
 
-![Voice AI](assets/demo-audio.aac)
+![AI Voice Flow](https://github.com/user-attachments/assets/45740cb5-1650-4578-9dd9-ff07a40b58fb)
 
 ---
 
@@ -174,7 +174,7 @@ npm run dev
 
 Add .env → start ngrok → done ✅
 
-![System Architecture](https://github.com/user-attachments/assets/773edfba-7d3a-4739-ad2a-c047c5ec5437)
+
 
 🌍 Future Improvements
 
@@ -197,4 +197,4 @@ Waiting time ⏳
 Human dependency 🤝
 
 
-![AI Voice Flow](https://github.com/user-attachments/assets/45740cb5-1650-4578-9dd9-ff07a40b58fb)
+
