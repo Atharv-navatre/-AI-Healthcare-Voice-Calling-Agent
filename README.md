@@ -1,300 +1,200 @@
 # 🏥 AI Healthcare Voice Calling Agent
 
-A real-time AI-powered healthcare voice assistant that handles patient phone calls, understands their concerns, and books appointments by triggering a live backend API.
+An AI-powered healthcare assistant that **calls hospitals and books OPD appointments automatically** using voice AI.
 
-This system demonstrates a **production-style low-latency architecture** using **Vapi Realtime Voice AI, Twilio telephony, and a custom Node.js backend**.
-
----
-
-## 🚀 What We Built
-
-This project enables a user to:
-
-- Call a real phone number ☎️  
-- Talk to an AI healthcare assistant 🧠  
-- Describe their health issue 🗣  
-- Automatically book an appointment 📅  
-- Store the booking through a backend API 🌐  
-
-All in **real time during a live phone conversation**.
+Built for hackathons ⚡ – Fullstack + Real-time AI voice + Telephony integration.
 
 ---
 
-## ☎️ Live AI Phone Number
+## 🚀 Live Flow
 
-**Twilio Number:** `+1 (805) 552 5948`
-
-You can place a real call and:
-
-1. AI greets you  
-2. You say: *"I want to book an appointment"*  
-3. AI asks for:
-   - Patient name
-   - Symptom  
-4. Backend API creates the appointment  
+1. User fills patient details in frontend
+2. Backend triggers Vapi voice call
+3. AI talks with hospital receptionist
+4. Appointment gets confirmed
+5. MongoDB updates in real-time
+6. Frontend shows confirmed booking
 
 ---
 
-## 🧠 Real-Time System Architecture
-# 🏥 AI Healthcare Voice Calling Agent
+## 🧠 System Architecture
 
-A real-time AI-powered healthcare voice assistant that handles patient phone calls, understands their concerns, and books appointments by triggering a live backend API.
-
-This system demonstrates a **production-style low-latency architecture** using **Vapi Realtime Voice AI, Twilio telephony, and a custom Node.js backend**.
+![Architecture](assets/demo-video.mp4)  
+<!-- Replace with your architecture image if needed -->
 
 ---
 
-## 🚀 What We Built
+## 🎙️ Voice AI Flow
 
-This project enables a user to:
-
-- Call a real phone number ☎️  
-- Talk to an AI healthcare assistant 🧠  
-- Describe their health issue 🗣  
-- Automatically book an appointment 📅  
-- Store the booking through a backend API 🌐  
-
-All in **real time during a live phone conversation**.
+![Voice AI](assets/demo-audio.aac)
 
 ---
 
-## ☎️ Live AI Phone Number
+## ✨ Features
 
-**Twilio Number:** `+1 (805) 552 5948`
-
-You can place a real call and:
-
-1. AI greets you  
-2. You say: *"I want to book an appointment"*  
-3. AI asks for:
-   - Patient name
-   - Symptom  
-4. Backend API creates the appointment  
+- 📞 AI makes real phone calls to hospitals
+- 🧠 Natural conversation using LLM
+- 📅 Automatic OPD booking
+- 🔄 Real-time status updates
+- 🌐 Fullstack implementation
+- ☁️ MongoDB Atlas database
+- 🔗 Vapi tool calling integration
+- 🌍 Public webhook via ngrok
 
 ---
 
-## 🧠 Real-Time System Architecture
-User Phone Call
-↓
-Twilio Voice
-↓
-Vapi Realtime AI Assistant
-↓
-Custom Tool (API Trigger)
-↓
-Node.js Backend (Express)
-↓
-Appointment Created
+## 🛠️ Tech Stack
 
+### Frontend
+- React (Vite)
+- Axios
+- CSS
 
-### ✅ Why this architecture?
+### Backend
+- Node.js
+- Express.js
+- MongoDB + Mongoose
 
-- ⚡ Ultra-low latency  
-- 🎙 Natural human conversation  
-- 🧩 Full backend control  
-- 🏗 Production-ready design  
+### AI & Voice
+- Vapi AI
+- OpenAI Realtime model
 
----
-
-## ✨ Core Features
-
-- ☎️ Real-time AI phone call handling  
-- 🧠 Natural conversational symptom collection  
-- 📅 Automatic appointment booking  
-- ⚡ Direct AI → Backend tool execution  
-- 🔊 Interruptible human-like voice interaction  
-- 🌍 Public API exposure using ngrok (development)  
-- 🧩 Scalable backend architecture  
-
----
-
-## 🛠 Tech Stack
-
-### 🎙 Voice & AI
-- **Vapi** – Realtime Voice AI Agent  
-- **OpenAI Realtime Model** – Natural conversation  
-- **Twilio** – Phone call infrastructure  
-
-### ⚙ Backend
-- Node.js  
-- Express.js  
-
-### 🧪 Development & Tools
-- ngrok – Public tunnel for local backend  
-- GitHub – Version control  
+### Dev Tools
+- ngrok
+- GitHub
 
 ---
 
 ## 📂 Project Structure
-healthcare-ai-voice-agent
+AI-Healthcare-Voice-Calling-Agent
+│
+├── assets
+│ ├── demo-audio.aac
+│ └── demo-video.mp4
+│
+├── healthcare-frontend
+│ ├── src
+│ │ ├── components
+│ │ ├── assets
+│ │ ├── App.jsx
+│ │ └── main.jsx
+│ ├── index.html
+│ └── package.json
 │
 ├── src
-│ ├── controllers
-│ │ └── appointment.controller.js
-│ ├── routes
-│ │ └── appointment.routes.js
-│ ├── services
-│ │ └── appointment.service.js
 │ ├── config
-│ │ └── db.js
+│ ├── controllers
+│ ├── models
+│ ├── routes
+│ ├── services
 │ ├── utils
-│ │ └── logger.js
 │ ├── app.js
 │ └── server.js
 │
-├── package.json
 ├── .env.example
-└── README.md
+└── package.json
+
 
 
 ---
 
-## ⚙️ Environment Setup
+## ⚙️ Environment Variables
 
-### 1️⃣ Clone the repository
-git clone https://github.com/Atharv-navatre/-AI-Healthcare-Voice-Calling-Agent.git
+### Backend `.env`
 
-cd healthcare-ai-backend
-
-### 2️⃣ Install dependencies
-npm install
-
-
-### 3️⃣ Create `.env`
+```
 PORT=5000
+MONGO_URI=your_mongodb_uri
+VAPI_API_KEY=your_vapi_api_key
+VAPI_ASSISTANT_ID=your_assistant_id
+```
 
+### Frontend `.env`
+
+```
+VITE_API_URL=http://localhost:5000
+```
 
 ---
 
-## ▶️ Run Locally
+## 🧪 Run Locally
 
-### Start backend
+### 1️⃣ Clone repo
+
+```bash
+git clone https://github.com/YOUR_USERNAME/AI-Healthcare-Voice-Calling-Agent.git
+cd AI-Healthcare-Voice-Calling-Agent
+
+2️⃣ Backend setup
+npm install
+npm run dev
+3️⃣ Start ngrok
+ngrok http 5000
+
+Copy forwarding URL → update in Vapi tool webhook
+
+https://your-ngrok-url/api/appointments/vapi-webhook
+4️⃣ Frontend setup
+cd healthcare-frontend
+npm install
+npm run dev
+🔗 API Endpoints
+Book appointment
+POST /api/appointments/book-opd
+Vapi webhook
+POST /api/appointments/vapi-webhook
+Get all appointments
+GET /api/appointments
+🤖 Vapi Configuration
+Tool → Server URL
+https://your-ngrok-url/api/appointments/vapi-webhook
+Assistant → Tool
+
+Attach:
+
+book_appointment
+🎬 Demo
+📹 Video
+
+assets/demo-video.mp4
+
+🔊 Call Recording
+
+assets/demo-audio.aac
+
+👨‍💻 Team Usage (Hackathon Ready)
+
+Just run:
+
+npm install
+npm run dev
+cd healthcare-frontend
+npm install
 npm run dev
 
-Server runs on:
-http://localhost:5000
+Add .env → start ngrok → done ✅
+
+![System Architecture](https://github.com/user-attachments/assets/773edfba-7d3a-4739-ad2a-c047c5ec5437)
+
+🌍 Future Improvements
+
+Multi-hospital support
+
+Doctor availability prediction
+
+WhatsApp/SMS confirmation
+
+Deployment (Render / Vercel)
+
+🏁 Hackathon Impact
+
+This system reduces:
+
+Manual hospital calls ☎️
+
+Waiting time ⏳
+
+Human dependency 🤝
 
 
-### Expose backend to internet (for Vapi tool)
-npx ngrok http 5000
-
-Use this in Vapi tool:
-https://5101-103-247-7-16.ngrok-free.app
-
-
----
-
-## 📡 API Endpoint
-
-### Book Appointment
-
-**POST** `/api/appointments/book`
-
-#### Request
-
-```json
-{
-  "patient_name": "Atharv",
-  "symptom": "fever"
-}
-
-Response
-
-{
-  "success": true,
-  "message": "Appointment booked successfully",
-  "data": {
-    "id": "auto-generated",
-    "patient_name": "Atharv",
-    "symptom": "fever"
-  }
-}
-
-🧠 Why We Didn’t Use n8n in the Core Flow
-
-This is a real-time voice interaction system, so:
-
-Direct AI → Backend gives:
-
-⚡ Faster response during live calls
-
-🎯 Lower latency
-
-🧠 More control over logic
-
-n8n will be used in the next phase for:
-
-📲 WhatsApp confirmations
-
-📧 Email notifications
-
-🗓 Google Calendar booking
-
-📊 CRM/database sync
-
-This follows real production architecture:
-
-
-Realtime logic → Backend  
-Async automations → n8n  
-
-🔮 Future Enhancements
-
-🗄 MongoDB patient database
-
-📅 Appointment date & time selection
-
-👨‍⚕ Doctor availability logic
-
-📲 WhatsApp confirmation (n8n)
-
-🌍 Multilingual voice (Hindi / Marathi)
-
-📊 Admin dashboard
-
-🧪 Demo Checklist
-
-Before placing a test call:
-
-
-npm run dev
-npx ngrok http 5000
-
-
-Update ngrok URL in Vapi tool → then call the Twilio number.
-
-👨‍💻 Author
-
-Atharv Navatre
-AI & Full Stack Developer
-Hackathon Builder 🚀
-
-🤝 Collaboration
-
-Open to collaboration on:
-
-AI Voice Agents
-
-Healthcare Automation
-
-Real-time AI systems
-
-⭐ Support
-
-If you like this project:
-
-Give it a ⭐ on GitHub and share it!
-
-## 🎥 Live AI Call Demo
-
-Watch a real conversation with the AI healthcare assistant:
-
-[![Watch the demo](https://img.shields.io/badge/▶️-Watch%20Video-red?style=for-the-badge)](assets/demo-video.mp4)
-
----
-
-## 🔊 Call Conversation Audio
-
-Listen to a real booking interaction:
-
-🎧 [Play / Download Audio](assets/demo-audio.aac)
+![AI Voice Flow](https://github.com/user-attachments/assets/45740cb5-1650-4578-9dd9-ff07a40b58fb)
