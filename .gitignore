@@ -1,4 +1,15 @@
+# dependencies
 node_modules
-.env
-.ngrok
+**/node_modules
+
+# build outputs
 dist
+**/dist
+
+# env files
+.env
+**/.env
+
+# misc
+.DS_Store
+.vscode
